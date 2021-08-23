@@ -6,7 +6,6 @@ const resolvers = require('./resolvers');
 const ProductsAPI = require('./datasources/products_api');
 const ComprasAPI = require('./datasources/compras_api');
 const UsersAPI = require('./dataSources/users_api');
-const AccountAPI = require('./dataSources/account_api');
 const authentication = require('./utils/authentication');
 
 const server = new ApolloServer({
@@ -14,7 +13,6 @@ const server = new ApolloServer({
     typeDefs,
     resolvers,
     dataSources: () => ({
-        accountAPI: new AccountAPI(),
         usersAPI: new UsersAPI(),
         comprasAPI: new ComprasAPI(),
         productsAPI: new ProductsAPI()

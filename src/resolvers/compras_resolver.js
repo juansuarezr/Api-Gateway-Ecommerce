@@ -1,7 +1,10 @@
 const comprasResolver = {
     Query: {
-        comprasByIdUser: (_, { userId }, {dataSources}) => {
-            return dataSources.comprasAPI.comprasByIdUser(userId)
+        comprasByIdUser: (_, { userId }, {dataSources, userIdToken}) => {
+            if(userId == userIdToken) 
+                return dataSources.comprasAPI.comprasByIdUser(userId)
+            else
+                return null
         },
         listarCompras: (_, __, {dataSources}) => {
             return dataSources.comprasAPI.listarCompras()

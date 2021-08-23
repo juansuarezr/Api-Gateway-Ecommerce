@@ -1,18 +1,21 @@
 {
-  "name": "apigateway",
+  "name": "api-gateway-ecommerce",
   "version": "1.0.0",
-  "description": "",
-  "main": "src/index",
+  "description": "Api gateway from the ecommerce app project",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juansuarezr/Api-Gateway-Ecommerce.git"
+  },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "apollo-datasource-rest": "^3.1.1",
-    "apollo-server": "^3.1.2",
-    "graphql": "^15.5.1",
-    "lodash": "^4.17.21",
-    "node-fetch": "^2.6.1"
-  }
+  "bugs": {
+    "url": "https://github.com/juansuarezr/Api-Gateway-Ecommerce/issues"
+  },
+  "homepage": "https://github.com/juansuarezr/Api-Gateway-Ecommerce#readme"
 }

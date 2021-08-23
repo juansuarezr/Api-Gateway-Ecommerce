@@ -9,7 +9,6 @@ class ComprasAPI extends RESTDataSource {
   }
 
   async comprasByIdUser(userId){
-      console.log("Calling function");
       return await this.get(`/compras/${userId}`);
   }
 
