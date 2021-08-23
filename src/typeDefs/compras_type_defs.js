@@ -15,14 +15,20 @@ const compraTypeDefs = gql`
         total: Float!
         fecha: String!
     }
+
+    input CarritoInput {
+        productId: String!
+        cantidad: Int!
+        valorUnidad: Float!
+    }
     
     input CompraInput {
         userId: String!
-        productos: [Carrito!]
+        productos: [CarritoInput!]
         total: Float!
     }
 
-    extend type Query {
+    type Query {
         comprasByIdUser(userId: String!): [Compra]
         listarCompras: [Compra]
     }

@@ -1,6 +1,6 @@
 const { gql } = require('apollo-server');
 
-const productosTypeDefs = gql`
+const productsTypeDefs = gql`
     type Product {
         id: Int!
         name: String!
@@ -9,6 +9,7 @@ const productosTypeDefs = gql`
         units: Int!
     }
 
+
     input ProductInput {
         name: String!
         description: String!
@@ -16,17 +17,17 @@ const productosTypeDefs = gql`
         units: Int!
     }
 
-    type Query {
-        listarProductos: [Product]
+    extend type Query {
         listarByIdProduct(id: Int!): Product
+        listarProductos: [Product]
     }
 
     extend type Mutation {
-        addProduct(product: ProductInput!): Product
+        addProduct(product: ProductInput!): String
         deleteProduct(productId: Int!): String
     }
 
 
     `;
 
-module.exports = productosTypeDefs; 
+module.exports = productsTypeDefs; 

@@ -12,8 +12,8 @@ class ProductsAPI extends RESTDataSource {
       return await this.get(`/products`);
     }
 
-  async listarByIdProduct(productId){
-      return await this.get(`/products/${productId}`);
+  async listarByIdProduct(id){
+      return await this.get(`/products/${id}`);
     }
 
   async deleteProduct(productId){
